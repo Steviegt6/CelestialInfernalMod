@@ -6,7 +6,7 @@ The Celestial Infernal Mod is a mod for Terraria using tModLoader.
 2. Open Terraria and enable the mod.
 
 ## Credits
-Andrzinho15
+Andrzinho16
 
 Nimmble-Bubble
 
