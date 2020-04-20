@@ -2,6 +2,7 @@
 The Celestial Infernal Mod is a mod for Terraria using tModLoader.
 
 [Celestial Infernal Website](https://debeast591.github.io/CelestialInfernalTerrariaMod.html)
+
 [Celestial Infernal Discord](https://discord.gg/S3S3KZp)
 
 ## What's In The Mod:
