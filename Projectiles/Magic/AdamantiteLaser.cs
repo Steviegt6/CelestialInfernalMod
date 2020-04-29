@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.Projectiles
+namespace CelestialInfernalMod.Projectiles.Magic
 {
 	public class AdamantiteLaser: ModProjectile
     {
