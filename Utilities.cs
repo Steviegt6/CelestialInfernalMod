@@ -1,4 +1,5 @@
 using CelestialInfernalMod.NPCs;
+using CelestialInfernalMod.Projectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
@@ -23,7 +24,7 @@ namespace CelestialInfernalMod
 		//public static CelestialInfernalPlayer Celestial(this Player player) => player.GetModPlayer<CelestialInfernalPlayer>();
 		public static CelestialInfernalGlobalNPC Celestial(this NPC npc) => npc.GetGlobalNPC<CelestialInfernalGlobalNPC>();
 		//public static CelestialInfernalGlobalItem Celestial(this Item item) => item.GetGlobalItem<CelestialInfernalGlobalItem>();
-		//public static CelestialInfernalGlobalProjectile Celestial(this Projectile proj) => proj.GetGlobalProjectile<CelestialInfernalGlobalProjectile>();
+		public static CelestialInfernalGlobalProjectile Celestial(this Projectile proj) => proj.GetGlobalProjectile<CelestialInfernalGlobalProjectile>();
 		#endregion
 
 		#region Player Utilities
