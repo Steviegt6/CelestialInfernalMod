@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Projectiles.Throwing;
 
 namespace CelestialInfernalMod.Items.Weapons.Ore
 {
@@ -25,14 +26,14 @@ namespace CelestialInfernalMod.Items.Weapons.Ore
 			item.rare = 0;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("IronCutlery");
+			item.shoot = ModContent.ProjectileType<IronCutleryProj>();
 			item.shootSpeed = 6f;
 		}
 
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(22, 1);
+			recipe.AddIngredient(ItemID.IronBar);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 50);
 			recipe.AddRecipe();

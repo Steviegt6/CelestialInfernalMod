@@ -1,3 +1,4 @@
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -25,6 +26,13 @@ namespace CelestialInfernalMod.Items.Weapons.Throwing
 			item.autoReuse = true;
 			item.shoot = ProjectileID.MechanicWrench;
 			item.shootSpeed = 15f;
+		}
+
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			int wrench = Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI, 0f, 0f);
+			Main.projectile[wrench].Celestial().forceThrown = true;
+			return false;
 		}
 
 		public override void AddRecipes() 

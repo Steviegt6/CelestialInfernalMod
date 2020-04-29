@@ -1,3 +1,4 @@
+using CelestialInfernalMod.Projectiles.Magic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -26,7 +27,7 @@ namespace CelestialInfernalMod.Items.Weapons
 			item.noMelee = true;
 			item.mana = 13;
 			item.UseSound = SoundID.Item75;
-			item.shoot = mod.ProjectileType("Friendlaser");
+			item.shoot = ModContent.ProjectileType<Friendlaser>();
 			item.shootSpeed = 15f;
 			item.autoReuse = true;
 			item.magic = true;
@@ -35,8 +36,8 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(514, 1);
-			recipe.AddIngredient(3457, 12);
+			recipe.AddIngredient(ItemID.LaserRifle);
+			recipe.AddIngredient(ItemID.FragmentNebula, 12);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

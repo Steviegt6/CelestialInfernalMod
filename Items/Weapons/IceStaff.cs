@@ -1,3 +1,4 @@
+using CelestialInfernalMod.Projectiles.Magic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -25,14 +26,11 @@ namespace CelestialInfernalMod.Items.Weapons
 			item.knockBack = 6;
 			item.mana = 12;
 			item.UseSound = SoundID.Item21;
-			item.shoot = mod.ProjectileType("FriceSpike");
+			item.shoot = ModContent.ProjectileType<FriceSpike>();
 			item.shootSpeed = 8f;
 			item.autoReuse = true;
 			item.magic = true;
-		}
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit) 
-        {
-			target.AddBuff(BuffID.Frostburn, 200);
+			item.noMelee = true;
 		}
 	}
 }

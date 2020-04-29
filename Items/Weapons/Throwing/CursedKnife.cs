@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Projectiles.Throwing;
 
 namespace CelestialInfernalMod.Items.Weapons.Throwing
 {
@@ -25,15 +26,15 @@ namespace CelestialInfernalMod.Items.Weapons.Throwing
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("CursedKnife");
+			item.shoot = ModContent.ProjectileType<CursedKnifeProj>();
 			item.shootSpeed = 15f;
 		}
 
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(279, 100);
-            recipe.AddIngredient(522, 1);
+			recipe.AddIngredient(ItemID.ThrowingKnife, 100);
+            recipe.AddIngredient(ItemID.CursedFlame);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

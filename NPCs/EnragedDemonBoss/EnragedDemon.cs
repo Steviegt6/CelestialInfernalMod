@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using CelestialInfernalMod.Projectiles.Boss;
 
 namespace CelestialInfernalMod.NPCs.EnragedDemonBoss
 {
@@ -58,55 +59,55 @@ namespace CelestialInfernalMod.NPCs.EnragedDemonBoss
             if (npc.ai[1] >= 140)
             {
                 int DemonAttack = Main.rand.Next(3);
-            switch (DemonAttack)
-            {
-                case 0:
-                if (npc.ai[1] % 40 == 0)
-                {
-                NPC.NewNPC((int)npc.Center.X + 20, (int)npc.Center.Y, NPCID.Demon);
-                }
-                if (npc.ai[1] == 180)
-                {    
-                npc.ai[1] = 0;
-                }
-                break;
-            case 1:
-                if (npc.ai[1] % 14 == 0)
-                {
-                float Speed = 5f;
-                Vector2 vector8 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
-                int damage = 25;
-                int type = mod.ProjectileType("EnragedScythe");
-                Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 1);
-                float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
-                }
-                if (npc.ai[1] >= 180)
-                {    
-                npc.ai[1] = 0;
-                }
-                break;
-            case 2:
-                if (npc.ai[1] % 20 == 0)
-                {
-                float SickleSpeed = 8f;
-                Vector2 vector9 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
-                int SickleDamage = 20;
-                int SickleType = 44;
-                Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 8);
-                float SickleRotation = (float)Math.Atan2(vector9.Y - (player.position.Y + (player.height * 0.5f)), vector9.X - (player.position.X + (player.width * 0.5f)));
-                int num55 = Projectile.NewProjectile(vector9.X, vector9.Y, (float)((Math.Cos(SickleRotation) * SickleSpeed) * -1), (float)((Math.Sin(SickleRotation) * SickleSpeed) * -1), SickleType, SickleDamage, 0f, 0);
-                }
-                if (npc.ai[1] >= 180)
-                {    
-                npc.ai[1] = 0;
-                }
-                break;
-            }
+				switch (DemonAttack)
+				{
+					case 0:
+					if (npc.ai[1] % 40 == 0)
+					{
+						NPC.NewNPC((int)npc.Center.X + 20, (int)npc.Center.Y, NPCID.Demon);
+					}
+					if (npc.ai[1] == 180)
+					{    
+						npc.ai[1] = 0;
+					}
+					break;
+				case 1:
+					if (npc.ai[1] % 14 == 0)
+					{
+						float Speed = 5f;
+						Vector2 vector8 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
+						int damage = 25;
+						int type = ModContent.ProjectileType<EnragedScythe>();
+						Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 1);
+						float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
+						int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+					}
+					if (npc.ai[1] >= 180)
+					{    
+						npc.ai[1] = 0;
+					}
+					break;
+				case 2:
+					if (npc.ai[1] % 20 == 0)
+					{
+						float SickleSpeed = 8f;
+						Vector2 vector9 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
+						int SickleDamage = 20;
+						int SickleType = ProjectileID.DemonSickle;
+						Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 8);
+						float SickleRotation = (float)Math.Atan2(vector9.Y - (player.position.Y + (player.height * 0.5f)), vector9.X - (player.position.X + (player.width * 0.5f)));
+						int num55 = Projectile.NewProjectile(vector9.X, vector9.Y, (float)((Math.Cos(SickleRotation) * SickleSpeed) * -1), (float)((Math.Sin(SickleRotation) * SickleSpeed) * -1), SickleType, SickleDamage, 0f, 0);
+					}
+					if (npc.ai[1] >= 180)
+					{    
+						npc.ai[1] = 0;
+					}
+					break;
+				}
                 
                 if (npc.ai[1] >= 180)
                 {    
-                npc.ai[1] = 0;
+					npc.ai[1] = 0;
                 }
             }
         }
