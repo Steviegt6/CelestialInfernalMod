@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CelestialInfernalMod", "CelestialInfernalMod.csproj", "{B286506B-F5F2-4787-A2DC-8A5871A44807}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B286506B-F5F2-4787-A2DC-8A5871A44807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B286506B-F5F2-4787-A2DC-8A5871A44807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B286506B-F5F2-4787-A2DC-8A5871A44807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B286506B-F5F2-4787-A2DC-8A5871A44807}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74B20B08-E64C-462B-92DF-EF8C69B64291}
+	EndGlobalSection
+EndGlobal

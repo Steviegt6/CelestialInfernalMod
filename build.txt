@@ -1,0 +1,8 @@
+displayName = Celestial Infernal Mod
+author = Andrzinho15
+version = 0.6.1
+homepage = https://forums.terraria.org/index.php?threads/the-celestial-infernal-mod.85268/#post-1860839
+hideCode = true
+hideResources = true
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*includePDB = true
+includePDB = true
