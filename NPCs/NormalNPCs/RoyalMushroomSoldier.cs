@@ -3,29 +3,29 @@ using Terraria.ModLoader;
 using Terraria.ID;
 
 
-namespace CelestialInfernalMod.Items.NPCs
+namespace CelestialInfernalMod.NPCs.NormalNPCs
 {
-    public class RoyalMushroomSlime : ModNPC
+    public class RoyalMushroomSoldier : ModNPC
     {
 
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[npc.type] = 2;
+            Main.npcFrameCount[npc.type] = 20;
         }
         public override void SetDefaults()
         {
             npc.width = 32;
-            npc.height = 24;
-            npc.damage = 10;
-            npc.defense = 5;
-            npc.lifeMax = 30;
+            npc.height = 32;
+            npc.damage = 16;
+            npc.defense = 2;
+            npc.lifeMax = 50;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
-            npc.value = 50f;
+            npc.value = 150f;
             npc.knockBackResist = 0.75f;
-            npc.aiStyle = 1;
-            aiType = NPCID.BlueSlime;
-            animationType = NPCID.BlueSlime;
+            npc.aiStyle = 3;
+            aiType = NPCID.GraniteGolem;
+            animationType = NPCID.GraniteGolem;
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -35,7 +35,7 @@ namespace CelestialInfernalMod.Items.NPCs
 
         public override void NPCLoot()
         {
-            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Mushroom, Main.rand.Next(2, 5));
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Mushroom, Main.rand.Next(3, 8));
         }
     }
 }

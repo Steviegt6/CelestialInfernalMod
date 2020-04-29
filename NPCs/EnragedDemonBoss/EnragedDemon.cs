@@ -9,7 +9,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CelestialInfernalMod.Items.NPCs
+namespace CelestialInfernalMod.NPCs.EnragedDemonBoss
 {
     [AutoloadBossHead]
     public class EnragedDemon : ModNPC

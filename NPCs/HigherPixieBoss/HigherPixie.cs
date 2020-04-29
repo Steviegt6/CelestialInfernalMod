@@ -10,7 +10,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CelestialInfernalMod.Items.NPCs
+namespace CelestialInfernalMod.NPCs.HigherPixieBoss
 {
     [AutoloadBossHead]
     public class HigherPixie : ModNPC

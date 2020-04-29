@@ -32,28 +32,32 @@ namespace CelestialInfernalMod.NPCs
                     break;
             }
         }
-         public override void NPCLoot(NPC npc)
-        {
-         if (npc.type == NPCID.Mothron && Main.rand.Next(4) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BrokenHeroBow"), 1);
-            }
-         if (npc.type == NPCID.Pixie && Main.rand.Next(100) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("PixieMedalion"), 1);
-            }
-         if (Main.rand.Next(100) == 0 && NPC.downedBoss3 == true && npc.type == NPCID.EaterofSouls || Main.rand.Next(100) == 0 && NPC.downedBoss3 == true && npc.type == NPCID.Crimera)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GrossSpine"), 1);
-            }
-         if (npc.type == NPCID.VoodooDemon && Main.rand.Next(10) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DemonicIdol"), 1);
-            }
-         if (npc.type == NPCID.EaterofWorldsHead && Main.rand.Next(20) == 0)
-            {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("EaterofMana"), 1);
-            }
-        }
+
+		public override void NPCLoot(NPC npc)
+		{
+			if (npc.type == NPCID.Mothron && Main.rand.Next(4) == 0)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BrokenHeroBow"), 1);
+			}
+			if (npc.type == NPCID.Pixie && Main.rand.Next(100) == 0)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("PixieMedalion"), 1);
+			}
+			if (Main.rand.NextBool(100) && NPC.downedBoss3)
+			{
+				if (npc.type == NPCID.EaterofSouls || npc.type == NPCID.Crimera)
+				{
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GrossSpine"), 1);
+				}
+			}
+			if (npc.type == NPCID.VoodooDemon && Main.rand.Next(10) == 0)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DemonicIdol"), 1);
+			}
+			if (npc.type == NPCID.EaterofWorldsHead && Main.rand.Next(20) == 0)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("EaterofMana"), 1);
+			}
+		}
     }
 }

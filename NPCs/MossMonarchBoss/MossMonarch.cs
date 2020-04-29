@@ -9,7 +9,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CelestialInfernalMod.NPCs
+namespace CelestialInfernalMod.NPCs.MossMonarchBoss
 {
     public class MossMonarch : ModNPC
     {

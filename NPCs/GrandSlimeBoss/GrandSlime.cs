@@ -9,7 +9,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CelestialInfernalMod.NPCs
+namespace CelestialInfernalMod.NPCs.GrandSlimeBoss
 {
     [AutoloadBossHead]
     public class GrandSlime : ModNPC

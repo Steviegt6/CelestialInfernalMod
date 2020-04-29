@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 
 
-namespace CelestialInfernalMod.Items.NPCs
+namespace CelestialInfernalMod.NPCs.NormalNPCs
 {
     public class Crimbat : ModNPC
     {

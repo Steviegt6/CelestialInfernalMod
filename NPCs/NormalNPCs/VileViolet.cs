@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 
 
-namespace CelestialInfernalMod.NPCs
+namespace CelestialInfernalMod.NPCs.NormalNPCs
 {
     public class VileViolet : ModNPC
     {

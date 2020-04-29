@@ -5,11 +5,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CelestialInfernalMod.NPCs
+namespace CelestialInfernalMod.NPCs.NormalNPCs
 {
 	internal class MillipedeHead : Millipede
 	{
-		public override string Texture { get { return "CelestialInfernalMod/NPCs/MillipedeHead"; } }
+		public override string Texture { get { return "CelestialInfernalMod/NPCs/NormalNPCs/MillipedeHead"; } }
 
 		public override void SetDefaults() 
         {
@@ -40,7 +40,7 @@ namespace CelestialInfernalMod.NPCs
 
 	internal class MillipedeBody : Millipede
 	{
-		public override string Texture { get { return "CelestialInfernalMod/NPCs/MillipedeBody"; } }
+		public override string Texture { get { return "CelestialInfernalMod/NPCs/NormalNPCs/MillipedeBody"; } }
 
 		public override void SetDefaults() {
             npc.CloneDefaults(NPCID.GiantWormBody);
@@ -61,7 +61,7 @@ namespace CelestialInfernalMod.NPCs
 
 	internal class MillipedeTail : Millipede
 	{
-		public override string Texture { get { return "CelestialInfernalMod/NPCs/MillipedeTail"; } }
+		public override string Texture { get { return "CelestialInfernalMod/NPCs/NormalNPCs/MillipedeTail"; } }
 
 		public override void SetDefaults() {
 			npc.CloneDefaults(NPCID.GiantWormTail);

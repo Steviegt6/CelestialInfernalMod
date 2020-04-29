@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.NPCs
+namespace CelestialInfernalMod.NPCs.NormalNPCs
 {
 	public class Necrolion : ModNPC
 	{

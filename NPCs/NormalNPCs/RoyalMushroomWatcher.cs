@@ -1,36 +1,35 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
 
-namespace CelestialInfernalMod.Items.NPCs
+namespace CelestialInfernalMod.NPCs.NormalNPCs
 {
-    public class RoyalMushroomSoldier : ModNPC
+    public class RoyalMushroomWatcher : ModNPC
     {
 
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[npc.type] = 20;
+            Main.npcFrameCount[npc.type] = 4;
         }
         public override void SetDefaults()
         {
-            npc.width = 32;
-            npc.height = 32;
-            npc.damage = 16;
-            npc.defense = 2;
+            npc.width = 80;
+            npc.height = 55;
+            npc.damage = 10;
+            npc.defense = 1;
             npc.lifeMax = 50;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
-            npc.value = 150f;
+            npc.value = 50f;
             npc.knockBackResist = 0.75f;
             npc.aiStyle = 3;
-            aiType = NPCID.GraniteGolem;
-            animationType = NPCID.GraniteGolem;
+            aiType = NPCID.BlueSlime;
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return SpawnCondition.OverworldDaySlime.Chance * 1f;
+            return SpawnCondition.OverworldDaySlime.Chance * 2f;
         }
 
         public override void NPCLoot()
