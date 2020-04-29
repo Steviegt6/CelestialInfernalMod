@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace CelestialInfernalMod.Projectiles.Melee
 {
-	public class DemonicScythe : ModProjectile
+	public class DemonicScytheProj : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{

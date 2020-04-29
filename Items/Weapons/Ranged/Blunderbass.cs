@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Ranged
 {
 	public class Blunderbass : ModItem
 	{
@@ -35,20 +35,10 @@ namespace CelestialInfernalMod.Items.Weapons
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Bass);
-			recipe.AddRecipeGroup("IronBar", 5);
+			recipe.AddIngredient(ItemID.IronBar);
+			recipe.anyIronBar = true;
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.MusketBall, 70);
-			recipe.AddIngredient(ItemID.TungstenBar, 1);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(ItemID.SilverBullet, 70);
-			recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup("IronBar", 1);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(ItemID.MusketBall, 50);
 			recipe.AddRecipe();
 		}
 	}

@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Melee
 {
 	public class BlizzardBlade : ModItem
 	{
@@ -25,7 +25,7 @@ namespace CelestialInfernalMod.Items.Weapons
 			item.value = Item.buyPrice(0, 54, 0, 0);
 			item.rare = 7;
 			item.UseSound = SoundID.Item1;
-            item.shoot = 119;
+            item.shoot = ProjectileID.FrostBoltSword;
             item.shootSpeed = 21.5f;
 			item.autoReuse = true;
 		}
@@ -33,9 +33,9 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(676, 1);
-            recipe.AddIngredient(724, 1);
-			recipe.AddIngredient(1570, 1);
+			recipe.AddIngredient(ItemID.Frostbrand);
+            recipe.AddIngredient(ItemID.IceBlade);
+			recipe.AddIngredient(ItemID.BrokenHeroSword);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

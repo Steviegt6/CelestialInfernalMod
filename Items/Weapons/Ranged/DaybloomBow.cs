@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Ranged
 {
 	public class DaybloomBow : ModItem
 	{
@@ -29,16 +29,12 @@ namespace CelestialInfernalMod.Items.Weapons
 			item.shootSpeed = 7f;
 			item.ranged = true;
 		}
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit) 
-        {
-			target.AddBuff(146, 200);
-		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(39, 1);
-			recipe.AddIngredient(313, 3);
+			recipe.AddIngredient(ItemID.WoodenBow);
+			recipe.AddIngredient(ItemID.Daybloom, 3);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

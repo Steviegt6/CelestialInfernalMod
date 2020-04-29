@@ -1,8 +1,9 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Items.Stuff;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Ranged
 {
 	public class DemonicBow : ModItem
 	{
@@ -29,15 +30,11 @@ namespace CelestialInfernalMod.Items.Weapons
 			item.shootSpeed = 9f;
 			item.ranged = true;
 		}
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit) 
-        {
-			target.AddBuff(BuffID.OnFire, 250);
-		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DemonFlesh"), 18);
+			recipe.AddIngredient(ModContent.ItemType<DemonFlesh>(), 18);
 			recipe.AddIngredient(ItemID.HellstoneBar, 5);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Melee
 {
 	public class BusterSword : ModItem
 	{
@@ -31,9 +31,9 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(426, 1); 
-            recipe.AddIngredient(3467, 10);
-			recipe.AddTile(412);
+			recipe.AddIngredient(ItemID.BreakerBlade); 
+            recipe.AddIngredient(ItemID.LunarBar, 10);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

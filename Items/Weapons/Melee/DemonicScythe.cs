@@ -2,8 +2,10 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Projectiles.Melee;
+using CelestialInfernalMod.Items.Stuff;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Melee
 {
 	public class DemonicScythe : ModItem
 	{
@@ -37,7 +39,7 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DemonFlesh"), 20);
+			recipe.AddIngredient(ModContent.ItemType<DemonFlesh>(), 20);
 			recipe.AddIngredient(ItemID.HellstoneBar, 5);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
@@ -48,23 +50,25 @@ namespace CelestialInfernalMod.Items.Weapons
 			return true;
 		}
 
-		public override bool CanUseItem(Player player) {
-			if (player.altFunctionUse == 2) {
-                item.useStyle = 1;
+		public override bool CanUseItem(Player player)
+		{
+			if (player.altFunctionUse == 2)
+			{
                 item.noUseGraphic = true;
 				item.useTime = 20;
 				item.useAnimation = 20;
-				item.damage = 32;
-				item.shoot = mod.ProjectileType("DemonicScythe");
+				item.shoot = ModContent.ProjectileType<DemonicScytheProj>();
 			    item.shootSpeed = 10f;
+				item.noMelee = true;
 				
 			}
-			else {
-                item.useStyle = 1;
-				item.useTime = 22;
-				item.useAnimation = 22;
-				item.damage = 32;
-				
+			else
+			{
+                item.noUseGraphic = false;
+				item.noMelee = false;
+				item.shoot = 0;
+				item.useTime = 15;
+				item.useAnimation = 15;
 			}
 			return base.CanUseItem(player);
 		}

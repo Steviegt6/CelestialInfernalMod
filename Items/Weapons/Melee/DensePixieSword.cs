@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Items.Stuff;
+using CelestialInfernalMod.Projectiles.Melee;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Melee
 {
 	public class DensePixieSword : ModItem
 	{
@@ -32,7 +34,7 @@ namespace CelestialInfernalMod.Items.Weapons
 			item.rare = 5;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("CrystalClay");
+			item.shoot = ModContent.ProjectileType<CrystalClay>();
 			item.shootSpeed = 6f;
 		}
         
@@ -52,7 +54,7 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DensePixieDust"), 18); //modded materials
+			recipe.AddIngredient(ModContent.ItemType<DensePixieDust>(), 18); //modded materials
             recipe.AddIngredient(ItemID.CrystalShard, 20);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

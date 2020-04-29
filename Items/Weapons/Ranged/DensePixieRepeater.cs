@@ -1,8 +1,9 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Items.Stuff;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Ranged
 {
 	public class DensePixieRepeater : ModItem
 	{
@@ -30,14 +31,14 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DensePixieDust"), 18); //modded materials
+			recipe.AddIngredient(ModContent.ItemType<DensePixieDust>(), 18); //modded materials
 			recipe.AddIngredient(ItemID.AdamantiteRepeater);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
             
             recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DensePixieDust"), 18); //modded materials
+			recipe.AddIngredient(ModContent.ItemType<DensePixieDust>(), 18); //modded materials
 			recipe.AddIngredient(ItemID.TitaniumRepeater);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

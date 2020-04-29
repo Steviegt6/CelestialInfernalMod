@@ -2,8 +2,9 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Items.Stuff;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Ranged
 {
 	public class BloodDropBow : ModItem
 	{
@@ -46,7 +47,7 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("BloodDrop"), 12);
+			recipe.AddIngredient(ModContent.ItemType<BloodDrop>(), 12);
 			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

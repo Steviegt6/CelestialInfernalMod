@@ -1,8 +1,9 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Projectiles.Melee;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Melee
 {
 	public class BeeSpear : ModItem
 	{
@@ -26,14 +27,14 @@ namespace CelestialInfernalMod.Items.Weapons
             item.noUseGraphic = true;
             item.noMelee = true;
 			item.UseSound = SoundID.Item1;
-			item.shoot = mod.ProjectileType("Sbeear");
+			item.shoot = ModContent.ProjectileType<Sbeear>();
 			item.shootSpeed = 8f;
 		}
 
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(2431, 12);
+			recipe.AddIngredient(ItemID.BeeWax, 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -1,8 +1,9 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Items.Stuff;
 
-namespace CelestialInfernalMod.Items.Weapons
+namespace CelestialInfernalMod.Items.Weapons.Magic
 {
 	public class DemonicTrident : ModItem
 	{
@@ -35,7 +36,7 @@ namespace CelestialInfernalMod.Items.Weapons
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DemonFlesh"), 16);
+			recipe.AddIngredient(ModContent.ItemType<DemonFlesh>(), 16);
 			recipe.AddIngredient(ItemID.HellstoneBar, 5);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
