@@ -22,6 +22,11 @@ namespace CelestialInfernalMod.NPCs
                     }
                     break;
                 case NPCID.Merchant:
+		if (NPC.downedBoss1)
+                    {
+                        shop.item[nextSlot].SetDefaults(mod.ItemType("BrokenTrumpet"));
+                        nextSlot++;
+                    }
                     if (Main.hardMode)
                     {
                         shop.item[nextSlot].SetDefaults(mod.ItemType("CursedKnife"));
