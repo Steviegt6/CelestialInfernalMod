@@ -9,7 +9,7 @@ namespace CelestialInfernalMod.Items.Weapons.Magic
 	{
         public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("BloodDropStaff"); 
+			DisplayName.SetDefault("Blood Drop Staff"); 
 			Tooltip.SetDefault("Shoots spray of deadly blood");
             Item.staff[item.type] = true;
 		}
