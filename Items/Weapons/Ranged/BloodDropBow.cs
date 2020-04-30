@@ -15,11 +15,11 @@ namespace CelestialInfernalMod.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			item.damage = 18;
+			item.damage = 12;
 			item.width = 14;
 			item.height = 24;
-			item.useTime = 15;
-			item.useAnimation = 18;
+			item.useTime = 20;
+			item.useAnimation = 20;
 			item.useStyle = 5;
 			item.value = Item.buyPrice(0, 2, 90, 0);
 			item.rare = 3;
