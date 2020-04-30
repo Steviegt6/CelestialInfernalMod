@@ -3,11 +3,12 @@ using Terraria.ModLoader;
 
 namespace CelestialInfernalMod.Items.Stuff
 {
-	public class TundraScale : ModItem
+	public class StrangeGel : ModItem
 	{
 		public override void SetStaticDefaults()
         {
-			Tooltip.SetDefault("The scales of a worm made of snow, ice, and memories");
+			DisplayName.SetDefault("Strange Gel"); 
+			Tooltip.SetDefault("It's really gooey");
         }
 
 		public override void SetDefaults()
@@ -15,8 +16,8 @@ namespace CelestialInfernalMod.Items.Stuff
 			item.width = 14;
 			item.height = 22;
 			item.maxStack = 999;
-			item.value = Item.buyPrice(0, 40, 0, 0);
-			item.rare = 8;
+			item.value = Item.buyPrice(0, 0, 20, 0);
+			item.rare = 1;
         }
 	}
 }
