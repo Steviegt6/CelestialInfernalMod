@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using CelestialInfernalMod.NPCs.MushroomKingBoss;
+using CelestialInfernalMod.NPCs.MushKing;
 
 namespace CelestialInfernalMod.Items.SummonItems
 {

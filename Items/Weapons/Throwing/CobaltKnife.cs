@@ -24,7 +24,7 @@ namespace CelestialInfernalMod.Items.Weapons.Throwing
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<CobaltKnife>();
+			item.shoot = ModContent.ProjectileType<CobaltKnifeProj>();
 			item.shootSpeed = 10f;
 		}
 

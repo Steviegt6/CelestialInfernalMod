@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using CelestialInfernalMod.NPCs.MushroomKingBoss;
+using CelestialInfernalMod.NPCs.MushKing;
 
 namespace CelestialInfernalMod.Items.SummonItems
 {

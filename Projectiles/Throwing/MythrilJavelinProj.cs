@@ -9,7 +9,7 @@ using Terraria.Enums;
 
 namespace CelestialInfernalMod.Projectiles.Throwing
 {
-	public class MythrilJavelin: ModProjectile
+	public class MythrilJavelinProj: ModProjectile
     {
         public override void SetDefaults()
         {

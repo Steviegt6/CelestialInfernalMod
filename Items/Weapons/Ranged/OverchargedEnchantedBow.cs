@@ -35,7 +35,7 @@ namespace CelestialInfernalMod.Items.Weapons.Ranged
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			if (type == ProjectileID.WoodenArrow)
+			if (type == ProjectileID.WoodenArrowFriendly)
 				type = ProjectileID.EnchantedBeam;
 			float numberProjectiles = 1 + Main.rand.Next(5); // 3, 4, or 5 shots
 			float rotation = MathHelper.ToRadians(10);

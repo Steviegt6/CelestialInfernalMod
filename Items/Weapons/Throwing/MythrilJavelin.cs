@@ -23,7 +23,7 @@ namespace CelestialInfernalMod.Items.Weapons.Throwing
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<MythrilJavelin>();
+			item.shoot = ModContent.ProjectileType<MythrilJavelinProj>();
 			item.shootSpeed = 12f;
 		}
 

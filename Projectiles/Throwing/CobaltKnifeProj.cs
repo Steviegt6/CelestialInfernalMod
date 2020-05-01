@@ -9,7 +9,7 @@ using Terraria.Enums;
 
 namespace CelestialInfernalMod.Projectiles.Throwing
 {
-	public class CobaltKnife: ModProjectile
+	public class CobaltKnifeProj : ModProjectile
     {
         public override void SetDefaults()
         {
