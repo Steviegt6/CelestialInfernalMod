@@ -1,7 +1,12 @@
+using CelestialInfernalMod.Items.Materials;
+using CelestialInfernalMod.Items.SummonItems;
+using CelestialInfernalMod.Items.Weapons.Magic;
+using CelestialInfernalMod.Items.Weapons.Throwing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace CelestialInfernalMod.NPCs
 {
@@ -15,23 +20,23 @@ namespace CelestialInfernalMod.NPCs
                 case NPCID.Wizard:
                     if (Main.hardMode)
                     {
-                        shop.item[nextSlot].SetDefaults(mod.ItemType("SorcererBlade"));
+                        shop.item[nextSlot].SetDefaults(ItemType<SorcererBlade>());
                         nextSlot++;
-                        shop.item[nextSlot].SetDefaults(mod.ItemType("StarCane"));
+                        shop.item[nextSlot].SetDefaults(ItemType<StarCane>());
                         nextSlot++;
                     }
                     break;
                 case NPCID.Merchant:
-		if (NPC.downedBoss1)
+					if (NPC.downedBoss1)
                     {
-                        shop.item[nextSlot].SetDefaults(mod.ItemType("SuspiciousLookingMushroom"));
+                        shop.item[nextSlot].SetDefaults(ItemType<SuspiciousLookingMushroom>());
                         nextSlot++;
                     }
                     if (Main.hardMode)
                     {
-                        shop.item[nextSlot].SetDefaults(mod.ItemType("CursedKnife"));
+                        shop.item[nextSlot].SetDefaults(ItemType<CursedKnife>());
                         nextSlot++;
-                        shop.item[nextSlot].SetDefaults(mod.ItemType("IchorKnife"));
+                        shop.item[nextSlot].SetDefaults(ItemType<IchorKnife>());
                         nextSlot++;
                     }
                     break;
@@ -40,28 +45,28 @@ namespace CelestialInfernalMod.NPCs
 
 		public override void NPCLoot(NPC npc)
 		{
-			if (npc.type == NPCID.Mothron && Main.rand.Next(4) == 0)
+			if (npc.type == NPCID.Mothron && Main.rand.NextBool(4))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BrokenHeroBow"), 1);
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokenHeroBow>(), 1);
 			}
-			if (npc.type == NPCID.Pixie && Main.rand.Next(100) == 0)
+			if (npc.type == NPCID.Pixie && Main.rand.NextBool(100))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("PixieMedalion"), 1);
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PixieMedalion>(), 1);
 			}
 			if (Main.rand.NextBool(100) && NPC.downedBoss3)
 			{
 				if (npc.type == NPCID.EaterofSouls || npc.type == NPCID.Crimera)
 				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GrossSpine"), 1);
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<GrossSpine>(), 1);
 				}
 			}
-			if (npc.type == NPCID.VoodooDemon && Main.rand.Next(10) == 0)
+			if (npc.type == NPCID.VoodooDemon && Main.rand.NextBool(10))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DemonicIdol"), 1);
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<DemonicIdol>(), 1);
 			}
-			if (npc.type == NPCID.EaterofWorldsHead && Main.rand.Next(20) == 0)
+			if (npc.type == NPCID.EaterofWorldsHead && Main.rand.NextBool(20))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("EaterofMana"), 1);
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<EaterofMana>(), 1);
 			}
 		}
     }
