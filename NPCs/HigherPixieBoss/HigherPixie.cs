@@ -85,12 +85,12 @@ namespace CelestialInfernalMod.NPCs.HigherPixieBoss
                 }
                 break;
             case 2:
-                if (npc.ai[1] % 10 == 0)
+                if (npc.ai[1] % 5 == 0)
                 {
                 float IceSpeed = 5f;
                 Vector2 vector9 = new Vector2(npc.position.X + Main.rand.Next(-250, 250), npc.position.Y - 400);
                 int IceDamage = 50;
-                int IceType = 174;
+                int IceType = mod.ProjectileType("CrystalPixie");
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 9);
                 float IceRotation = (float)Math.Atan2(vector9.Y - (player.position.Y + (player.height * 0.5f)), vector9.X - (player.position.X + (player.width * 0.5f)));
                 int num55 = Projectile.NewProjectile(vector9.X, vector9.Y, (float)((Math.Cos(IceRotation) * IceSpeed) * -1), (float)((Math.Sin(IceRotation) * IceSpeed) * -1), IceType, IceDamage, 0f, 0);
