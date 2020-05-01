@@ -9,7 +9,7 @@ The Celestial Infernal Mod is a mod for Terraria using tModLoader.
 - Many new weapons
 - New armors
 - Many new bosses
-- New enemys
+- New enemies
 - Any so much more!
 
 
