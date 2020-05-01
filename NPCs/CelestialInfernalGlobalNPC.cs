@@ -24,7 +24,7 @@ namespace CelestialInfernalMod.NPCs
                 case NPCID.Merchant:
 		if (NPC.downedBoss1)
                     {
-                        shop.item[nextSlot].SetDefaults(mod.ItemType("BrokenTrumpet"));
+                        shop.item[nextSlot].SetDefaults(mod.ItemType("SuspiciousLookingMushroom"));
                         nextSlot++;
                     }
                     if (Main.hardMode)
