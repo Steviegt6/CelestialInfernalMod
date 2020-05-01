@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -17,6 +17,7 @@ namespace CelestialInfernalMod.Items.Tools
 			item.knockBack = 6;
 			item.value = Item.buyPrice(0, 0, 65, 0);
 			item.rare = 2;
+            item.melee = true;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 

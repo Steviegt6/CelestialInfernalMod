@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -19,8 +19,8 @@ namespace CelestialInfernalMod.Items.Tools
 			item.rare = 3;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-
-			item.pick = 95;
+            item.melee = true;
+			item.pick = 100;
 		}
 
 		public override void AddRecipes()

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
@@ -19,7 +19,7 @@ namespace CelestialInfernalMod.Items.Tools
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-
+            item.melee = true;
 			item.axe = 30;
 		}
 

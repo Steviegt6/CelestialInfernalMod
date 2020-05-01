@@ -19,7 +19,7 @@ namespace CelestialInfernalMod.Items.Tools
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-
+            item.melee = true;
 			item.pick = 180;
 		}
 
