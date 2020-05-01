@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CelestialInfernalMod.Items.Stuff;
+using CelestialInfernalMod.Items.Materials;
 using CelestialInfernalMod.Projectiles.Melee;
 
 namespace CelestialInfernalMod.Items.Weapons.Melee

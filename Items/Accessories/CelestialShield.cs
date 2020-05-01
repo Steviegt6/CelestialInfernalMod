@@ -61,11 +61,11 @@ namespace CelestialInfernalMod.Items.Accessories
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.AnkhShield);
             recipe.AddIngredient(ItemID.CelestialShell);
-            recipe.AddIngredient(3456, 10);
-            recipe.AddIngredient(3457, 10);
-            recipe.AddIngredient(3458, 10);
-            recipe.AddIngredient(3459, 10);
-            recipe.AddTile(412);
+            recipe.AddIngredient(ItemID.FragmentVortex, 10);
+            recipe.AddIngredient(ItemID.FragmentNebula, 10);
+            recipe.AddIngredient(ItemID.FragmentSolar, 10);
+            recipe.AddIngredient(ItemID.FragmentStardust, 10);
+            recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);
         }
     }

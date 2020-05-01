@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Projectiles.Throwing;
 
 namespace CelestialInfernalMod.Items.Weapons.Throwing
 {
@@ -23,7 +24,7 @@ namespace CelestialInfernalMod.Items.Weapons.Throwing
 			item.rare = 1;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("NinjaKunai");
+			item.shoot = ModContent.ProjectileType<NinjaKunai>();
 			item.shootSpeed = 10f;
 		}
 	}

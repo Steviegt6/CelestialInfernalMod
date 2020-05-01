@@ -1,4 +1,4 @@
-using CelestialInfernalMod.Items.Stuff;
+using CelestialInfernalMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;

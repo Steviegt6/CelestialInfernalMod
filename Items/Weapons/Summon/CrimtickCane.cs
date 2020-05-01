@@ -3,6 +3,8 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CelestialInfernalMod.Buffs;
+using CelestialInfernalMod.Projectiles.Minions;
 
 namespace CelestialInfernalMod.Items.Weapons.Summon
 {
@@ -30,9 +32,9 @@ namespace CelestialInfernalMod.Items.Weapons.Summon
 			item.UseSound = SoundID.Item44;
 			item.noMelee = true;
 			item.summon = true;
-			item.buffType = mod.BuffType("CrimtickBuff");
+			item.buffType = ModContent.BuffType<CrimtickBuff>();
 			// No buffTime because otherwise the item tooltip would say something like "1 minute duration"
-			item.shoot = mod.ProjectileType("Crimtick");
+			item.shoot = ModContent.ProjectileType<Crimtick>();
 		}
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) {
@@ -46,7 +48,7 @@ namespace CelestialInfernalMod.Items.Weapons.Summon
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(1330, 25); //modded materials
+			recipe.AddIngredient(ItemID.Vertebrae, 25);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

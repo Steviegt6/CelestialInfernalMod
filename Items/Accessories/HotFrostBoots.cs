@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using CelestialInfernalMod.Items.Materials;
 
 namespace CelestialInfernalMod.Items.Accessories
 {
@@ -31,7 +32,7 @@ namespace CelestialInfernalMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.accRunSpeed = 10f;
-            player.moveSpeed += 1.2f;
+            player.moveSpeed += 0.2f;
             player.rocketBoots = 3;
             player.lavaMax += 500;
             player.fireWalk = true;
@@ -44,8 +45,8 @@ namespace CelestialInfernalMod.Items.Accessories
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.FrostsparkBoots);
             recipe.AddIngredient(ItemID.LavaWaders);
-            recipe.AddIngredient(mod.ItemType("GreatGel"), 30);
-            recipe.AddIngredient(mod.ItemType("DensePixieDust"), 30);
+            recipe.AddIngredient(ModContent.ItemType<GreatGel>(), 30);
+            recipe.AddIngredient(ModContent.ItemType<DensePixieDust>(), 30);
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this);
             recipe.AddRecipe();

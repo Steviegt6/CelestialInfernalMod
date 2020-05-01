@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using CelestialInfernalMod.Items.Stuff;
+using CelestialInfernalMod.Items.Materials;
 
 namespace CelestialInfernalMod.Items.Weapons.Ranged
 {

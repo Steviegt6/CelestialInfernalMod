@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
-using CelestialInfernalMod.Items.Weapons.Ore;
+using CelestialInfernalMod.Items.Weapons.Throwing;
 
 namespace CelestialInfernalMod.Projectiles.Throwing
 {
