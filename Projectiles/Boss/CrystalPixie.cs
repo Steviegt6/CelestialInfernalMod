@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 
-namespace CelestialInfernalMod.Projectiles
+namespace CelestialInfernalMod.Projectiles.Boss
 {
     public class CrystalPixie : ModProjectile
     {
