@@ -1,13 +1,90 @@
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using CelestialInfernalMod.Items.Weapons.Melee;
 using CelestialInfernalMod.Items.Materials;
+using CelestialInfernalMod.Items.SummonItems;
+using CelestialInfernalMod.Items.Weapons.Melee;
+using CelestialInfernalMod.NPCs.EnragedDemonBoss;
+using CelestialInfernalMod.NPCs.GrandSlimeBoss;
+using CelestialInfernalMod.NPCs.HigherPixieBoss;
+using CelestialInfernalMod.NPCs.MushKing;
+using CelestialInfernalMod.NPCs.PutridCoagulationBoss;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Graphics;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using Terraria;
+using Terraria.GameContent.Dyes;
+using Terraria.GameContent.UI;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.UI;
 
 namespace CelestialInfernalMod
 {
 	public class CelestialInfernalMod : Mod
 	{
+		public override void PostSetupContent()
+		{
+			// Showcases mod support with Boss Checklist without referencing the mod
+			Mod bossChecklist = ModLoader.GetMod("BossChecklist");
+			if (bossChecklist != null)
+			{
+				bossChecklist.Call(
+					"AddBoss",
+					0.1f,
+					new List<int> { ModContent.NPCType<GrandSlime>() },
+					this, // Mod
+					"$Mods.CelestialInfernalMod.NPCName.GrandSlime",
+					(Func<bool>)(() => CelestialInfernalModWorld.downedGrandSlime),
+					ModContent.ItemType<SlimyMess>(),
+					"$Mods.CelestialInfernalMod.BossSpawnInfo.GrandSlime"
+				);
+				bossChecklist.Call(
+					"AddBoss",
+					2.1f,
+					ModContent.NPCType<MushroomKing>(),
+					this,
+					"$Mods.CelestialInfernalMod.NPCName.MushroomKing",
+					(Func<bool>)(() => CelestialInfernalModWorld.downedMushroomKing),
+					ModContent.ItemType<SuspiciousLookingMushroom>(),
+					"$Mods.CelestialInfernalMod.BossSpawnInfo.MushroomKing"
+				);
+				bossChecklist.Call(
+					"AddBoss",
+					3.1f,
+					ModContent.NPCType<EnragedDemon>(),
+					this,
+					"$Mods.CelestialInfernalMod.NPCName.EnragedDemon",
+					(Func<bool>)(() => CelestialInfernalModWorld.downedEnragedDemon),
+					ModContent.ItemType<DemonicIdol>(),
+					"$Mods.CelestialInfernalMod.BossSpawnInfo.EnragedDemon"
+				);
+				bossChecklist.Call(
+					"AddBoss",
+					5.1f,
+					ModContent.NPCType<PutridCoagulation>(),
+					this,
+					"$Mods.CelestialInfernalMod.NPCName.PutridCoagulation",
+					(Func<bool>)(() => CelestialInfernalModWorld.downedPutridCoagulation),
+					ModContent.ItemType<GrossSpine>(),
+					"$Mods.CelestialInfernalMod.BossSpawnInfo.PutridCoagulation"
+				);
+				bossChecklist.Call(
+					"AddBoss",
+					6.1f,
+					ModContent.NPCType<HigherPixie>(),
+					this,
+					"$Mods.CelestialInfernalMod.NPCName.HigherPixie",
+					(Func<bool>)(() => CelestialInfernalModWorld.downedHigherPixie),
+					ModContent.ItemType<PixieMedalion>(),
+					"$Mods.CelestialInfernalMod.BossSpawnInfo.HigherPixie"
+				);
+			}
+		}
+
         private static ModRecipe GetNewRecipe() => new ModRecipe(ModContent.GetInstance<CelestialInfernalMod>());
 
 		public override void AddRecipes()
