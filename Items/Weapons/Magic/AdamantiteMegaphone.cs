@@ -11,7 +11,6 @@ namespace CelestialInfernalMod.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Adamantite Megaphone"); 
 			Tooltip.SetDefault("Fires harmful waves");
-            Item.staff[item.type] = true;
 		}
 		public override void SetDefaults()
 		{
