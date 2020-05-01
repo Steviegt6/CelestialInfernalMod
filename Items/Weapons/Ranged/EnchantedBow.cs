@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.Items.Weapons.Ranged.PreHardmode
+namespace CelestialInfernalMod.Items.Weapons.Ranged
 {
 	public class EnchantedBow : ModItem
 	{
