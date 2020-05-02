@@ -45,6 +45,13 @@ namespace CelestialInfernalMod.NPCs
 
 		public override void NPCLoot(NPC npc)
 		{
+			if (Main.hardMode && !npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly && npc.position.Y > Main.rockLayer * 16.0 && npc.value > 0f && Main.rand.NextBool(Main.expertMode ? 2 : 1, 5))
+				{
+					if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneJungle)
+						{
+							Item.NewItem(npc.getRect(), ItemType<SoulOfPhyte>(), 1);
+						}
+				}
 			if (npc.type == NPCID.Mothron && Main.rand.NextBool(4))
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokenHeroBow>(), 1);
