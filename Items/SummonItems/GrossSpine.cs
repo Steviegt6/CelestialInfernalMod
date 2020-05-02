@@ -53,8 +53,7 @@ namespace CelestialInfernalMod.Items.SummonItems
 			recipe.AddRecipe();
 
 			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Vertebrae, 30);
-			recipe.AddIngredient(ItemID.WormTooth, 5);
+			recipe.AddIngredient(ItemID.Vertebrae, 15);
 			recipe.AddIngredient(ItemID.CrimtaneBar, 5);
 			recipe.AddIngredient(ItemID.Bone, 30);
 			recipe.AddTile(TileID.Anvils);
