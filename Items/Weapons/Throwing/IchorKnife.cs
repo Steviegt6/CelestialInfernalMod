@@ -36,7 +36,7 @@ namespace CelestialInfernalMod.Items.Weapons.Throwing
 			recipe.AddIngredient(ItemID.ThrowingKnife, 100);
             recipe.AddIngredient(ItemID.Ichor);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
+			recipe.SetResult(this, 100);
 			recipe.AddRecipe();
 		}
 	}
