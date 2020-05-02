@@ -38,7 +38,7 @@ namespace CelestialInfernalMod.NPCs.PutridCoagulationBoss
             npc.noTileCollide = true;
             npc.HitSound = SoundID.NPCHit18;
             npc.DeathSound = SoundID.NPCDeath1;
-            music = MusicID.Boss2;
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/RepulsingJudgement");
         }
 
         public override void HitEffect(int hitDirection, double damage)
