@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialInfernalMod.Items.Weapons.Melee.Hardmode
+namespace CelestialInfernalMod.Items.Weapons.Melee
 {
 	public class OverchargedEnchantedSword : ModItem
 	{

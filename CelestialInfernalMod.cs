@@ -26,6 +26,17 @@ namespace CelestialInfernalMod
 {
 	public class CelestialInfernalMod : Mod
 	{
+		internal static CelestialInfernalMod instance;
+
+        #region Load
+        public override void Load()
+        {
+			instance = this;
+
+            CelestialLocalization.AddLocalizations();
+		}
+		#endregion
+
 		public override void PostSetupContent()
 		{
 			// Showcases mod support with Boss Checklist without referencing the mod
@@ -117,5 +128,15 @@ namespace CelestialInfernalMod
 			recipe.SetResult(ItemID.EnchantedSword);
 			recipe.AddRecipe();
 		}
+
+        #region Update Server Boolean
+        public static void UpdateServerBoolean()
+        {
+            if (Main.netMode == NetmodeID.Server)
+            {
+                NetMessage.SendData(7, -1, -1, null, 0, 0f, 0f, 0f, 0, 0, 0);
+            }
+        }
+        #endregion
 	}
 }

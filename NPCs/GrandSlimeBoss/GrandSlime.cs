@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using CelestialInfernalMod.Tiles;
 
 namespace CelestialInfernalMod.NPCs.GrandSlimeBoss
 {
@@ -53,30 +55,47 @@ namespace CelestialInfernalMod.NPCs.GrandSlimeBoss
         }
         public override void NPCLoot()
         {
-            if(Main.expertMode)
+            if (Main.expertMode)
             {
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.PixelBox);
             }
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Gel, Main.rand.Next(25, 50));
-                int GrandLoot = Main.rand.Next(5);
+			Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Gel, Main.rand.Next(25, 50));
+			int GrandLoot = Main.rand.Next(5);
             switch (GrandLoot)
             {
                 case 0:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.SlimeStaff, Main.rand.Next(1, 2));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.SlimeStaff);
                 break;
                 case 1:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SlimySword"), Main.rand.Next(1, 2));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SlimySword"));
                 break;
                 case 2:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SlimyBow"), Main.rand.Next(1, 2));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SlimyBow"));
                 break;
                 case 3:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SlimyWand"), Main.rand.Next(1, 2));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SlimyWand"));
                 break;
                 case 4:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.StickyBomb, Main.rand.Next(10, 50));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.StickyBomb, Main.rand.Next(10, 51));
                 break;
             }
+
+            // If not defeated yet, spawn Oozing Metal
+            if (!CelestialInfernalModWorld.downedGrandSlime)
+            {
+                string key = "Mods.CelestialInfernalMod.OozeMetalText";
+                Color messageColor = new Color(0, 255, 127);
+                Utilities.SpawnOre(ModContent.TileType<OozeOre>(), 12E-05, .4f, .65f);
+
+                if (Main.netMode == NetmodeID.SinglePlayer)
+                    Main.NewText(Language.GetTextValue(key), messageColor);
+                else if (Main.netMode == NetmodeID.Server)
+                    NetMessage.BroadcastChatMessage(NetworkText.FromKey(key), messageColor);
+            }
+
+            // Mark The Grand Slime as dead
+            CelestialInfernalModWorld.downedGrandSlime = true;
+            CelestialInfernalMod.UpdateServerBoolean();
         }
 
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
