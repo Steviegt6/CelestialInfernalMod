@@ -20,7 +20,7 @@ namespace CelestialInfernalMod.Items.Tools
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.melee = true;
-			item.axe = 40;
+			item.axe = 7;
 		}
 
 		public override void AddRecipes()
