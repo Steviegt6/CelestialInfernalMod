@@ -8,20 +8,20 @@ namespace CelestialInfernalMod.Items.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.damage = 16;
+			item.damage = 45;
 			item.width = 32;
 			item.height = 32;
-			item.useTime = 16;
-			item.useAnimation = 20;
+			item.useTime = 12;
+			item.useAnimation = 15;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = Item.buyPrice(0, 0, 65, 0);
-			item.rare = 3;
+			item.value = Item.buyPrice(0, 12, 50, 0);
+			item.rare = 5;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.melee = true;
-			item.hammer = 110;
-			item.axe = 40;
+			item.hammer = 90;
+			item.axe = 25;
 		}
 
 		public override void AddRecipes()
@@ -29,7 +29,7 @@ namespace CelestialInfernalMod.Items.Tools
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.ItemType("DensePixieDust"), 14); //modded materials
 			recipe.AddIngredient(ItemID.PixieDust, 10);
-			recipe.AddIngredient(ItemID.Wood, 4); //vanilla materials
+			recipe.AddIngredient(ItemID.Pearlwood, 4); //vanilla materials
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
