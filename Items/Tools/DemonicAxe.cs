@@ -15,7 +15,7 @@ namespace CelestialInfernalMod.Items.Tools
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = Item.buyPrice(0, 0, 65, 0);
+			item.value = Item.buyPrice(0, 1, 25, 0);
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
