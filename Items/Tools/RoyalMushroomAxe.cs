@@ -8,10 +8,10 @@ namespace CelestialInfernalMod.Items.Tools
 	{
 		public override void SetDefaults()
 		{
-			item.damage = 16;
+			item.damage = 12;
 			item.width = 32;
 			item.height = 32;
-			item.useTime = 16;
+			item.useTime = 10;
 			item.useAnimation = 20;
 			item.useStyle = 1;
 			item.knockBack = 6;
@@ -20,7 +20,7 @@ namespace CelestialInfernalMod.Items.Tools
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.melee = true;
-			item.axe = 30;
+			item.axe = 6;
 		}
 
 		public override void AddRecipes()
