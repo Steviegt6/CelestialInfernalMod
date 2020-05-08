@@ -21,7 +21,7 @@ namespace CelestialInfernalMod.Projectiles.Throwing
             projectile.tileCollide = true;
             projectile.maxPenetrate = 1;
             projectile.friendly = true;
-            projectile.thrown = true;
+            projectile.magic = true;
             projectile.penetrate = -1;
             projectile.timeLeft = 150;
         }
