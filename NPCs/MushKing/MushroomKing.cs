@@ -26,11 +26,11 @@ namespace CelestialInfernalMod.NPCs.MushKing
         {
             npc.aiStyle = -1;
             npc.lifeMax = 3000;
-            npc.damage = 42;
-            npc.defense = 20;
+            npc.damage = 35;
+            npc.defense = 0;
             npc.knockBackResist = 0f;
-            npc.width = 88;
-            npc.height = 128;
+            npc.width = 44;
+            npc.height = 68;
             npc.value = 50000;
             npc.npcSlots = 1f;
             npc.boss = true;
@@ -62,12 +62,26 @@ namespace CelestialInfernalMod.NPCs.MushKing
             {
                 float Speed = 10f;
                 Vector2 vector8 = new Vector2(npc.position.X + (npc.width / 2), npc.position.Y + (npc.height / 2));
-                int damage = 15;
+                int damage = 20;
                 int type = mod.ProjectileType("MushroomKingProjectile");
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 5);
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 npc.ai[1] = 0;
+            }
+            if (npc.ai[1] == 80 && npc.life <= 2000)
+            {
+                float Speed = 10f;
+                Vector2 vector8 = new Vector2(npc.position.X + (npc.width / 2), npc.position.Y + (npc.height / 2));
+                int damage = 20;
+                int type = mod.ProjectileType("GlowingKingProjectile");
+                Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 5);
+                float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
+                int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+            }
+            if (npc.ai[1] == 120 && npc.life <= 2500)
+            {
+                NPC.NewNPC((int)npc.Center.X, (int)npc.Center.Y, mod.NPCType("RoyalMushroomSoldier"));
             }
         }
 
