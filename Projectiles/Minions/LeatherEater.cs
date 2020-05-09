@@ -203,7 +203,7 @@ namespace CelestialInfernalMod.Projectiles.Minions
 			}
 
 			// Some visuals here
-			Lighting.AddLight(projectile.Center, Color.Red.ToVector3() * 0.5f);
+			Lighting.AddLight(projectile.Center, Color.Brown.ToVector3() * 0.5f);
 			#endregion
 		}
 	}
