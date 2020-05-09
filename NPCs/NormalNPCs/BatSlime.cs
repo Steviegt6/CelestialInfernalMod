@@ -24,6 +24,7 @@ namespace CelestialInfernalMod.NPCs.NormalNPCs
             npc.value = 100f;
             npc.knockBackResist = 0.75f;
             npc.aiStyle = 1;
+            npc.alpha = 63;
             aiType = NPCID.BlueSlime;
             animationType = NPCID.BlueSlime;
         }
