@@ -1,3 +1,6 @@
+using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
@@ -36,6 +39,10 @@ namespace CelestialInfernalMod.NPCs.NormalNPCs
         public override void NPCLoot()
         {
             Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Mushroom, Main.rand.Next(3, 8));
+            if (Main.rand.Next(20) < 1)
+            {
+                Item.NewItem(npc.getRect(), ItemID.Spear, Main.rand.Next(1, 2));
+            }
         }
     }
 }
