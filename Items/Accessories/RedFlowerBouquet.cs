@@ -14,7 +14,7 @@ namespace CelestialInfernalMod.Items.Accessories
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("This beautiful bouquet fills your body with life"
-                                 + "\nIt increases your max health by 100 when worn."
+                                 + "\nIt increases your max health by 50 when worn."
                                     + "\nIncreased health regeneration.");
         }
         public override void SetDefaults()
@@ -23,14 +23,14 @@ namespace CelestialInfernalMod.Items.Accessories
             item.width = 48;
             item.height = 48;
             item.value = Item.buyPrice(0, 5, 0, 0);
-            item.rare = 9;
+            item.rare = 3;
             item.expert = false;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.lifeRegen += 3;
-            player.statLifeMax2 += 100;
+            player.statLifeMax2 += 50;
         }
         public override void AddRecipes() 
 		{
